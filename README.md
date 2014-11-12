@@ -1,4 +1,4 @@
-Hadoop Mapreduce Example: Log file Analysis:
+Hadoop Mapreduce Example using maven: Log file Analysis:
 Processing based on date time so that number of different log messages based on each day is reported. 
 Here in this example we need to group mapper keys on log type and group them per day. 
 
