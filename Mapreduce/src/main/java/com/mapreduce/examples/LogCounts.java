@@ -120,32 +120,10 @@ public class LogCounts {
 				Reporter reporter)
 						throws IOException {
 			int count = 0;
-			//Forecasting based on data
-			double A=0.1;
-
-			int index=0;
-			double St=0.0;
-			double Stminus1=0.0;
-
-			double Xt=0.0;
-
 			while( values.hasNext() )
 			{
-				// Add the value to our count
-				Xt=values.next().get();
-				count += Xt;
-				if(index==0){
-					index++;
-					Stminus1=Xt;
-				}else{
-
-					St=A*Xt+(1-A)*Stminus1;
-
-				}
-
-
+				count += values.next().get();
 			}
-			System.out.println("St value="+St);
 			// Output the word with its count (wrapped in an IntWritable)
 			output.collect( key, new IntWritable( count ) );
 
@@ -153,9 +131,7 @@ public class LogCounts {
 
 
 	}
-	public static void CalcuateRegression(){
-		double A=0.1;
-	}
+	
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException{
 		Configuration config = new Configuration();
 		config.set("myfile", args[0]);
