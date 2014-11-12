@@ -1,21 +1,20 @@
 Hadoop Mapreduce Example: Log file Analysis:
 Processing based on date time so that number of different log messages based on each day is reported. 
 Here in this example we need to group mapper keys on log type and group them per day. 
+
 Example:
+
+------------------------------------------
 2014-11-07 T 12:00:00.000 ERROR	36
+
 2014-11-07 T 12:00:00.000 INFO	1827
+
 2014-11-07 T 12:00:00.000 WARN	57
+
 2014-11-08 T 12:00:00.000 ERROR	18
+
 2014-11-08 T 12:00:00.000 INFO	465
+
 2014-11-08 T 12:00:00.000 WARN	27
-2014-11-28 T 12:00:00.000 ERROR	9
-2014-11-28 T 12:00:00.000 INFO	1221
-2014-11-28 T 12:00:00.000 WARN	30
-2014-11-29 T 12:00:00.000 INFO	333
-2014-11-30 T 12:00:00.000 INFO	48
-2014-12-01 T 12:00:00.000 ERROR	12
-2014-12-01 T 12:00:00.000 INFO	5235
-2014-12-01 T 12:00:00.000 WARN	30
-2014-12-02 T 12:00:00.000 INFO	48
-2014-12-03 T 12:00:00.000 INFO	2796
-=======
+
+-------------------------------------------------
